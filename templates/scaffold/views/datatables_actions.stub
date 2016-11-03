@@ -7,9 +7,11 @@
         <i class="glyphicon glyphicon-edit"></i>
     </a>
     {!! Form::button('<i class="glyphicon glyphicon-trash"></i>', [
-        'type' => 'button',
-        'class' => 'btn btn-danger btn-xs',
-        'onclick' => "return confirm('". ucfirst( trans('common.delete') )."?')"]) !!}
+            'type' => 'button',
+            'class' => 'btn btn-danger btn-xs',
+            'onclick' => "confirmDelete('formDelete".$id."');",
+            'title' => ucfirst(trans('common.delete'))
+        ]) !!}
 
 </div>
 {!! Form::close() !!}
